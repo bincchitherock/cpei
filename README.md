@@ -86,6 +86,4 @@ tools like the welch method treat each frequency bin independently, so when hear
 
 ```text
 - matlab r2019b or later
-- signal processing toolbox (`pwelch`, `hilbert`)
-
----
+- signal processing toolbox
