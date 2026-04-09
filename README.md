@@ -37,14 +37,7 @@ tools like the welch method treat each frequency bin independently, so when hear
 
 ## key results
 
-### octave error (signal 2 — hearing loss simulation)
-| algorithm | octave errors |
-|---|---|
-| welch | 3 / 5 conditions |
-| **rps** | **0 / 5 conditions** |
-| yin | 0 / 5 (but produced no estimates at all) |
-
-### sensitivity (signal 1 — clean harmonic ffr)
+### 1. sensitivity
 | algorithm | detectable down to snr |
 |---|---|
 | plv | −10 db |
@@ -53,7 +46,14 @@ tools like the welch method treat each frequency bin independently, so when hear
 | cpei | 0 db |
 | yin | +20 db only |
 
-### drifting pitch (signal 3)
+### 2. octave error
+| algorithm | octave errors |
+|---|---|
+| welch | 3 / 5 conditions |
+| **rps** | **0 / 5 conditions** |
+| yin | 0 / 5 (but produced no estimates at all) |
+
+### 3. drifting pitch
 | algorithm | result |
 |---|---|
 | cpei | detected (cpei = 0.47) |
@@ -62,7 +62,7 @@ tools like the welch method treat each frequency bin independently, so when hear
 | plv | near noise floor |
 | yin | 0 / 497 valid frames |
 
-### noise floor (signal 4 — false positive control)
+### 4. noise floor 
 | algorithm | noise floor |
 |---|---|
 | cpei | 0.040 ± 0.0003 |
@@ -70,6 +70,15 @@ tools like the welch method treat each frequency bin independently, so when hear
 | itpc | 0.089 ± 0.003 |
 | welch snr | 0.22 ± 0.77 db |
 | yin | no detections |
+
+### 5. two-speaker separation 
+| algorithm | speaker a (120 hz) | speaker b (180 hz) | separates? |
+|---|---|---|---|
+| cpei | 0.158 | 0.061 | yes: asymmetric |
+| plv | 0.478 | 0.464 | yes: symmetric |
+| itpc | 0.306 | 0.306 | yes: symmetric |
+| welch snr | 29.08 db | 29.67 db | yes: symmetric |
+| yin | nan | nan | complete failure |
 
 ---
 
