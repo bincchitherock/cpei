@@ -11,16 +11,7 @@ when a person listens to speech, their brain tracks the rhythm and pitch of the 
 
 ## the octave error problem
 
-standard tools like the welch periodogram treat each frequency bin independently. when hearing loss weakens the brain's response at the fundamental frequency f0, the dominant peak migrates to 2×f0 (the first harmonic), causing a systematic octave error. rps avoids this by design: all harmonics of a fundamental period t collapse into the same ramanujan subspace s_t, so the method accumulates energy from the entire harmonic series regardless of which individual harmonic is strongest.
-
----
-
-## files
-
-| file | description |
-|---|---|
-| `Synthetic_Validation_Full.m` | main validation script. runs all 5 algorithms across all 5 synthetic signal types and prints a full comparison table. |
-| `Welch_ClickABR2.m` | welch periodogram baseline pipeline for click abr eeg data. validates the eeg preprocessing pipeline. |
+standard tools like the welch periodogram treat each frequency bin independently. when hearing loss weakens the brain's response at the fundamental frequency f0, the dominant peak migrates to 2×f0 (the first harmonic), causing a systematic octave error. rps avoids this since all harmonics of a fundamental period t collapse into the same ramanujan subspace, so the method accumulates energy from the entire harmonic series regardless of which individual harmonic is strongest.
 
 ---
 
@@ -69,11 +60,11 @@ standard tools like the welch periodogram treat each frequency bin independently
 ### drifting pitch (signal 3)
 | algorithm | result |
 |---|---|
-| cpei | ✅ detected (cpei = 0.47) |
-| welch | ✅ detected |
-| itpc | ⚠️ partial |
-| plv | ⚠️ near noise floor |
-| yin | ❌ 0 / 497 valid frames |
+| cpei | detected (cpei = 0.47) |
+| welch | detected |
+| itpc | partial |
+| plv | near noise floor |
+| yin | 0 / 497 valid frames |
 
 ### noise floor (signal 4 — false positive control)
 | algorithm | noise floor |
@@ -90,7 +81,6 @@ standard tools like the welch periodogram treat each frequency bin independently
 
 - matlab r2019b or later
 - signal processing toolbox (`pwelch`, `hilbert`)
-- eeglab (required only for `Welch_ClickABR2.m`)
 
 ---
 
