@@ -84,12 +84,8 @@ tools like the welch method treat each frequency bin independently, so when hear
 
 ## requirements
 
+```text
 - matlab r2019b or later
 - signal processing toolbox (`pwelch`, `hilbert`)
 
 ---
-
-## usage
-
-### synthetic validation
-```matlab
