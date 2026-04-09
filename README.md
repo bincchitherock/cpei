@@ -1,6 +1,5 @@
 # chirp-speech periodicity entrainment index (cpei)
-derived from projections onto ramanujan periodic subspaces (rps), for measuring neural temporal tracking in auditory eeg. for a detailed description on the code base, please refer to the 20260409_Code_Documentation.pdf
-
+derived from projections onto ramanujan periodic subspaces (rps), for measuring neural temporal tracking in auditory eeg. for a detailed description on the code base, please refer to the [20260409_Code_Documentation.pdf](./20260409_Code_Documentation.pdf)
 ---
 
 ## background
