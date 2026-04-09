@@ -1,12 +1,11 @@
-# rps-cpei: ramanujan periodic subspace periodicity entrainment index
-
-a matlab implementation of the **chirp-speech periodicity entrainment index (cpei)**, derived from projections onto ramanujan periodic subspaces (rps), for measuring neural temporal tracking in auditory eeg. developed as part of a hearing loss research project at uc davis / neurotech@davis.
+# chirp-speech periodicity entrainment index (cpei)
+derived from projections onto ramanujan periodic subspaces (rps), for measuring neural temporal tracking in auditory eeg. 
 
 ---
 
-## what this does
+## background
 
-when a person listens to speech, their brain tracks the rhythm and pitch of the speaker's voice. this tracking degrades in people with hearing loss or age-related auditory decline. cpei is a scalar metric (0 to 1) that quantifies how strongly a neural signal is entrained to a target modulation frequency — and unlike standard fourier-based methods, it is robust to the **octave error problem** that arises when hearing loss preferentially attenuates the fundamental frequency relative to its harmonics.
+when a person listens to speech, their brain tracks the rhythm and pitch of the speaker's voice. this tracking degrades in people with hearing loss or age-related auditory decline. cpei is a scalar metric (0 to 1) that quantifies how strongly a neural signal is entrained to a target modulation frequency. and unlike standard fourier-based methods, it should be robust to the octave error problem that arises when hearing loss preferentially attenuates the fundamental frequency relative to its harmonics.
 
 ---
 
