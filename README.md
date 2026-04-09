@@ -7,11 +7,7 @@ derived from projections onto ramanujan periodic subspaces (rps), for measuring 
 
 when a person listens to speech, their brain tracks the rhythm and pitch of the speaker's voice. this tracking degrades in people with hearing loss or age-related auditory decline. cpei is a scalar metric (0 to 1) that quantifies how strongly a neural signal is entrained to a target modulation frequency. and unlike standard fourier-based methods, it should be robust to the octave error problem that arises when hearing loss preferentially attenuates the fundamental frequency relative to its harmonics.
 
----
-
-## the octave error problem
-
-standard tools like the welch periodogram treat each frequency bin independently. when hearing loss weakens the brain's response at the fundamental frequency f0, the dominant peak migrates to 2×f0 (the first harmonic), causing a systematic octave error. rps avoids this since all harmonics of a fundamental period t collapse into the same ramanujan subspace, so the method accumulates energy from the entire harmonic series regardless of which individual harmonic is strongest.
+tools like the welch method treat each frequency bin independently, so when hearing loss weakens the brain's response at the fundamental frequency, the dominant peak migrates to the first harmonic, which causes an octave error. rps avoids this since all harmonics of a fundamental period t collapse into the same ramanujan subspace, so the method accumulates energy from the entire harmonic series regardless of which individual harmonic is strongest.
 
 ---
 
